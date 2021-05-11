@@ -2,12 +2,39 @@
 //
 
 #include <iostream>
+#include<string>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+class Solution {
+private:
+	int A;
+public:
+	Solution(int a)
+	{
+		A = a;
+	}
+	string findDigitsInBinary(int);
+};
+string Solution::findDigitsInBinary(int A) {
+	if (A == 0)
+		return "0";
+	string binaryNum = "";
+	while (A > 0) {
+		int rem = A % 2;
+		A /= 2;
+		string num = to_string(rem);
+		binaryNum.append(num);
+	}
+	reverse(binaryNum.begin(), binaryNum.end());
+	return binaryNum;
 }
-
+int main() {
+	int n;
+	cin >> n;
+	Solution* solution = new Solution(n);
+	cout<<solution->findDigitsInBinary(n)<<endl;
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
