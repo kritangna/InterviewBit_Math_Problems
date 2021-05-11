@@ -30,10 +30,15 @@ string Solution::findDigitsInBinary(int A) {
 	return binaryNum;
 }
 int main() {
-	int n;
-	cin >> n;
-	Solution* solution = new Solution(n);
-	cout<<solution->findDigitsInBinary(n)<<endl;
+	int t = 0;
+	int n = 0;
+	cin >> t;
+	while (t--) {
+		cin >> n;
+		Solution* solution = new Solution(n);
+		cout << solution->findDigitsInBinary(n) << endl;
+	}
+	return 0;
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
