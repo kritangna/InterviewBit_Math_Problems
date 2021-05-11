@@ -1,1 +1,0 @@
-# InterviewBit_Math_Problems
